@@ -1,6 +1,7 @@
 import MovieList from "../components/MovieList"
 import MovieSlider from "../components/MovieSlider"
 import Navbar from "../components/Navbar"
+import { ChevronRightIcon } from "@heroicons/react/24/outline"
 
 const Home = () => {
   return (
@@ -10,7 +11,19 @@ const Home = () => {
       <div className="max-w-[1440px] mx-auto">
         <MovieSlider />
 
-        <h2 className="text-xl font-semibold my-6">Doscover Movies</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-4xl font-semibold my-6">Featured Movie</h2>
+          <h2 className="text-md text-red-500 flex items-center justify-center gap-1">See more <ChevronRightIcon className="w-5 h-5" /></h2>
+        </div>
+
+        <MovieList />
+
+
+        <div className="flex items-center justify-between mt-5">
+          <h2 className="text-4xl font-semibold my-6">New Arrival</h2>
+          <h2 className="text-md text-red-500 flex items-center justify-center gap-1">See more <ChevronRightIcon className="w-5 h-5" /></h2>
+        </div>
+
         <MovieList />
       </div>
     </div>

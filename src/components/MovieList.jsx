@@ -1,6 +1,18 @@
+import MovieCard from "./MovieCard"
+
 const MovieList = () => {
   return (
-    <div>MovieList</div>
+    <div className="flex items-center justify-between">
+      <MovieCard />
+
+      <MovieCard />
+
+      <MovieCard />
+
+      <MovieCard />
+      
+      <MovieCard />
+    </div>
   )
 }
 
