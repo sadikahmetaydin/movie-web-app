@@ -1,4 +1,4 @@
-import { PlayCircleIcon, StarIcon } from "@heroicons/react/24/outline"
+import { PlayCircleIcon, HeartIcon } from "@heroicons/react/24/outline"
 
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
       <input className="text-sm text-slate-800 px-4 py-2 rounded-md w-1/3 border border-slate-700 focus:outline-0" type="text" placeholder="Search movies..." />
 
       <div className="bg-red-500 p-2 rounded-full">
-        <StarIcon className="w-7 h-7 text-white"/>
+        <HeartIcon className="w-7 h-7 text-white"/>
       </div>
     </div>
   )
