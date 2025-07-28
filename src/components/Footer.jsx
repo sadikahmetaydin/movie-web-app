@@ -22,10 +22,11 @@ const Footer = () => {
             <FaYoutube className='text-red-600 hover:text-red-400 transition-colors text-2xl' />
           </a>
         </div>
-
       </div>
 
-      <div className="flex justify-center mt-5 gap-10 text-sm">
+      <div className="border border-gray-300 w-[500px] mx-auto mt-3"></div>
+
+      <div className="flex justify-center mt-3 gap-10 text-sm">
         <a href="#" className='text-gray-500'>Privacy Policy</a>
         <a href="#" className='text-gray-500'>Terms of Service</a>
         <a href="#" className='text-gray-500'>Contact Us</a>
