@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar"
 import { ChevronRightIcon } from "@heroicons/react/24/outline"
 import TrailerList from "../components/TrailerList"
 import FamousActors from "../components/FamousActors"
+import Footer from "../components/Footer"
 
 const Home = () => {
   return (
@@ -42,6 +43,8 @@ const Home = () => {
         </div>
 
         <FamousActors />
+
+        <Footer />
 
       </div>
     </div>
