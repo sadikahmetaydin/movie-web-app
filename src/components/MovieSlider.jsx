@@ -46,7 +46,7 @@ const MovieSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % movies.length)
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
