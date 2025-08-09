@@ -46,6 +46,30 @@ const Discover = () => {
     fetchRandomMovies();
   }, [])
 
+  const getFavorites = () => {
+    const stored = localStorage.getItem("favorites");
+    return stored ? JSON.parse(stored) : [];
+  };
+
+  const saveFavorites = (favorites) => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  };
+
+  const isFavorite = (id) => {
+    return getFavorites().some((fav) => fav.id === id);
+  }
+
+  const toggleFavorite = (movie) => {
+    const current = getFavorites();
+    const exists = current.some((fav) => fav.id === movie.id);
+
+    const updated = exists
+      ? current.filter((fav) => fav.id !== movie.id)
+      : [...current, movie];
+
+    saveFavorites(updated);
+  }
+
   return (
     <div className="px-6 py-10">
       <div className="flex flex-wrap space-x-10 space-y-10 justify-center">
@@ -57,6 +81,8 @@ const Discover = () => {
             posterPath={movie.poster_path}
             releaseDate={movie.release_date}
             runtime={movie.runtime}
+            isFavorite={isFavorite(movie.id)}
+            onToggleFavorite={() => toggleFavorite(movie)}
           />
         ))}
       </div>

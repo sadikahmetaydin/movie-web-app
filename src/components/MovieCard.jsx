@@ -1,8 +1,9 @@
-import { HeartIcon } from "@heroicons/react/24/outline"
+import { HeartIcon as SolidHeart } from "@heroicons/react/24/solid";
+import { HeartIcon as OutlineHeart } from "@heroicons/react/24/outline";
 import { ClockIcon } from "@heroicons/react/24/solid"
 import { Link } from "react-router-dom"
 
-const MovieCard = ({ id, title, posterPath, releaseDate, runtime }) => {
+const MovieCard = ({ id, title, posterPath, releaseDate, runtime, isFavorite, onToggleFavorite }) => {
   return (
     <Link to={`/movie/${id}`}>
       <div className="hover:scale-105 transition-transform duration-300 w-[250px]">
@@ -17,7 +18,13 @@ const MovieCard = ({ id, title, posterPath, releaseDate, runtime }) => {
 
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold truncate">{title}</h2>
-          <HeartIcon className="w-5 h-5 text-red-500 cursor-pointer" />
+          <button onClick={onToggleFavorite}>
+            {isFavorite ? (
+              <SolidHeart className="w-5 h-5 text-red-500" />
+            ) : (
+              <OutlineHeart className="w-5 h-5 text-gray-400 hover:text-red-500" />
+            )}
+          </button>
         </div>
 
         <div className="flex items-center justify-between text-sm text-gray-500">
