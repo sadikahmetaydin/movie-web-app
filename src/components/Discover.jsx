@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import MovieCard from "./MovieCard"
+import { Link } from "react-router-dom"
+import { ChevronRightIcon } from "@heroicons/react/24/solid"
 
 const Discover = () => {
 
@@ -72,6 +74,12 @@ const Discover = () => {
 
   return (
     <div className="px-6 py-10">
+
+      <div className="flex justify-between items-center">
+        <h2 className="ml-12 text-3xl font-bold mb-6 text-gray-500">🎬 Discover Movies </h2>
+        <Link to={"/favorites"}><h2 className="mr-30 text-3xl font-bold mb-6 text-gray-500 hover:text-red-500 duration transition-all cursor-pointer flex items-center relative">❤️ Favorites <ChevronRightIcon className="w-5 h-5 absolute left-45 top-3" /></h2></Link>
+      </div>
+
       <div className="flex flex-wrap space-x-10 space-y-10 justify-center">
         {movies.map((movie) => (
           <MovieCard
