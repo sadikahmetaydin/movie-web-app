@@ -5,16 +5,17 @@ import { Link } from "react-router-dom"
 
 const MovieCard = ({ id, title, posterPath, releaseDate, runtime, isFavorite, onToggleFavorite }) => {
   return (
-    <Link to={`/movie/${id}`}>
-      <div className="hover:scale-105 transition-transform duration-300 w-[250px]">
+    <div className="hover:scale-105 transition-transform duration-300 w-[250px]">
         
-        <div className="mb-4">
-          <img className="w-[250px] h-[370px] object-cover rounded-lg" src={
-            posterPath
-              ? `https://image.tmdb.org/t/p/w500${posterPath}`
-              : "https://via.placeholder.com/250x370?text=No+Image"
-          } alt={title} />
-        </div>
+        <Link to={`/movie/${id}`}>
+          <div className="mb-4">
+            <img className="w-[250px] h-[370px] object-cover rounded-lg" src={
+              posterPath
+                ? `https://image.tmdb.org/t/p/w500${posterPath}`
+                : "https://via.placeholder.com/250x370?text=No+Image"
+            } alt={title} />
+          </div>
+        </Link>
 
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold truncate">{title}</h2>
@@ -35,7 +36,6 @@ const MovieCard = ({ id, title, posterPath, releaseDate, runtime, isFavorite, on
           </div>
         </div>
       </div>
-    </Link>
   )
 }
 
