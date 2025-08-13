@@ -76,7 +76,7 @@ const Discover = () => {
     <div className="px-6 py-10">
 
       <div className="flex justify-between items-center">
-        <h2 className="ml-12 text-3xl font-bold mb-6 text-gray-500">🎬 Discover Movies </h2>
+        <Link to={"/"}><h2 className="ml-12 text-3xl font-bold mb-6 text-gray-500 hover:text-red-500 cursor-pointer flex items-center relative">🎬 Home <ChevronRightIcon className="w-5 h-5 absolute left-35 top-3" /></h2></Link>
         <Link to={"/favorites"}><h2 className="mr-30 text-3xl font-bold mb-6 text-gray-500 hover:text-red-500 duration transition-all cursor-pointer flex items-center relative">❤️ Favorites <ChevronRightIcon className="w-5 h-5 absolute left-45 top-3" /></h2></Link>
       </div>
 

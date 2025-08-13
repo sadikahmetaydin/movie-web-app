@@ -24,7 +24,7 @@ const Favorites = () => {
     <div className="px-6 py-6">
 
       <div className="flex justify-between items-center">
-        <h2 className="ml-12 text-3xl font-bold mb-6 text-gray-500">❤️ Favorite Movies</h2>
+        <Link to={"/"}><h2 className="ml-12 text-3xl font-bold mb-6 text-gray-500 hover:text-red-500 cursor-pointer flex items-center relative">🎬 Home <ChevronRightIcon className="w-5 h-5 absolute left-35 top-3" /></h2></Link>
         <Link to={"/discover"}><h2 className="mr-32 text-3xl font-bold mb-6 text-gray-500 hover:text-red-500 cursor-pointer flex items-center relative">🎬 Discover Movies <ChevronRightIcon className="w-5 h-5 absolute left-72 top-3" /></h2></Link>
       </div>
 
