@@ -1,6 +1,7 @@
 import { PlayCircleIcon, HeartIcon } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -62,7 +63,9 @@ const Navbar = () => {
       </div>
       
       <div className="bg-red-500 p-2 rounded-full">
-        <HeartIcon className="w-7 h-7 text-white"/>
+        <Link to={"/favorites"}>
+           <HeartIcon className="w-7 h-7 text-white"/>
+        </Link>
       </div>
     </div>
   )
