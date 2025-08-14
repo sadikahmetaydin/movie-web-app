@@ -55,4 +55,4 @@ To run the project locally, follow these steps:
 
 ## 🎥 Video
 
-...
+https://github.com/user-attachments/assets/5e37580b-7452-442e-890e-76ed30e5500b
