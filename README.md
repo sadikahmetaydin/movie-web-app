@@ -8,13 +8,13 @@ The app features a clean and responsive design built with Tailwind CSS, ensuring
 
 ## ⚙️ Features
 
-- 🎲 Random movie list (powered by TMDB API)
-- 📄 Movie detail page (poster, overview, runtime, release year)
-- ❤️ Add/remove favorites (persistent via localStorage)
-- ⭐ Favorites list page
-- 🔄 Dynamic routing (`react-router-dom`)
-- 🎨 Responsive and consistent design (Tailwind CSS)
-- 🧭 Navigation bar for easy access
+- Random movie list (powered by TMDB API)
+- Movie detail page (poster, overview, runtime, release year)
+- Add/remove favorites (persistent via localStorage)
+- Favorites list page
+- Dynamic routing (`react-router-dom`)
+- Responsive and consistent design (Tailwind CSS)
+- Navigation bar for easy access
 
 ## 🛠️ Technology and Tools
 
